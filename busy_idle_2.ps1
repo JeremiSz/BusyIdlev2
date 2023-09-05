@@ -19,8 +19,6 @@ while($pressedKey.Key -ne "q"){
     $x = Get-Random -Maximum $maxPos.ScreenWidth
     $y = Get-Random -Maximum $maxPos.ScreenHeight
     [System.Windows.Forms.Cursor]::Position = New-Object System.Drawing.Point($x,$y)
-    $WShell.SendKeys("{SCROLLLOCK}")
-    Start-Sleep -Milliseconds 100
-    $WShell.SendKeys("{SCROLLLOCK}")
+    $WShell.SendKeys("+{F15}")
     Start-Sleep -Seconds $frequency
 }
